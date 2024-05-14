@@ -1,6 +1,6 @@
 EXP-6
 
-                                                                         SIMULATE AND SYNTHESIS INVERTER USING CADENCE
+                                                          SIMULATE AND SYNTHESIS INVERTER USING CADENCE
 
                                                                          
 AIM: 
