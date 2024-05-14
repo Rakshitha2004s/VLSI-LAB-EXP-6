@@ -1,10 +1,14 @@
 EXP-6
+
                                                                          SIMULATE AND SYNTHESIS INVERTER USING CADENCE
-AIM:
-To Simulate and Synthesis Inverter using CADENCE
+
+                                                                         
+AIM: 
+     To Simulate and Synthesis Inverter using CADENCE
 
 APPARATUS REQUIRED: CADENCE VIRTUOSO
 PROCEDURE:
+
 STEP:1 Cadence Virtuoso open procedere
 
 STEP:2 Open MobaXterm
