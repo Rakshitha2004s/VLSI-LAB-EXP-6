@@ -4,81 +4,130 @@ EXP-6
 
                                                                          
 AIM: 
-     To Simulate and Synthesis Inverter using CADENCE
+ 
+To create,simulate the design of CMOS inverter,NAND,NOR from schematic using cadence.
 
-APPARATUS REQUIRED: CADENCE VIRTUOSO
+APPARATUS REQUIRED:
+cadence
+
 PROCEDURE:
+Commands to get into Cadence
+Right Click and open the terminal window Type the following commands as follows and press enter. i) tcsh ii) source /home/install/cshrc iii) virtuoso
 
-STEP:1 Cadence Virtuoso open procedere
+Procedure for Schematic simulation using Cadence
+Now two windows must open i)virtuoso/command interpreter window ii)”Whats New…” Close the 2nd window Use 1st window i.e virtuoso window(CIW) for further processing. i) Create a New Library ii) Create Schematic Cell view. iii) Create the Symbol for schematic Cell view. iv) Create the test Cell view. v) Analog simulation by spectre
 
-STEP:2 Open MobaXterm
+Procedure for Creating New Library.
+a) File –New – Library b) Name : Give name for ur library Ex: VLSILAB , Enable Attach to an existing technology library, Click OK c) Attach the library to the technology library gpdk045.Click OK
 
-STEP:3 Click on Session (Top left Cornet)
+Create Schematic Cell view.
+a) Go to 1st window i.e virtuoso(CIW) b) File-New-Cell view c) Setup the new file form, Library: Select the one you a created. Cell : Give the experiment name Ex: Inverter View: Schematic d) Type: Schematic press OK e) Add the required components from the libraries and make the connections. f) Go to instance fixed menu or use shortcut key “I” from keypad to go instances Click on browse. This opens the library browser ow select the appropriate library for components like Gpdk045,nmos, pmos g) Analog library Vdd, Gnd, Vcc, Vpulse, Vsin h) Make the connections by using fixed narrow wire key i) Click Check and Save button
 
-STEP:4 Choose SSH
+Creating the Symbol for schematic Cell view
+a. In the schematic window, execute Crate – Cell view – From Cell view The cell view from cell view window appears Check Lib Name, Cell Name, From View name must be schematic Press ok b. Now Symbol generation form appears. Click Ok If No changes required c. A new window with with default symbol is created. d. Edit the symbol if you want to give actual symbol shape else continue. i. Execute Create-Cell view-from cell view ii. Library Name and Cell Name must be same which you have used for schematic. Press OK iii. Check for the position of pin side.Prss OK iv. Edit for the shape by Create-Shape-Choose required options to edit.
 
-STEP:5 In Remote Host enter then on Password "student@cadence.saveetha.in"
+Creating the new test cell view
+a) Go to CIW window, Execute File-New-Cell view b) Setup the new file form Library: Select the one you a created. Cell: Cell name must be different from the name used in schematic cell view. Ex: Inverter_test View: Schematic Type: Schematic press OK
 
-STEP:6 Type xdg-open .
+Analog simulation by SPECTRE.
+a. In test cell view window i. Launch – ADE L(Analog Design Environment) b. Execute Setup—Simulation/directory/Host A new window opens c. Set the simulation window to spectre and click ok d. Execute Setup-Model Library. Anew window opens, Check of gpdk.scs as lib and section type as stat then press OK. e. Execute Analysis – Choose. A window opens. f. Select the type and set the specifications and press OK g. Execute Output s—to be plotted – Select on Schematic h. Then Select the INPUT WIRE(Vin ) and OUTPUT WIRE(Vout) from your test Schematic using mouse i. Execute Simulation -- Net list and Run
 
-STEP:7 Create a new folder
+INVERTER SCHEMATIC:
 
-STEP:8 Right click on folder window open
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/36f2c33d-af56-48a9-8ca5-f470048cd5b1)
 
-STEP:9 Terminal Command window will be opened
 
-STEP:10 In Command window type the following.
-->pwd
-->tcsh
--> Source / Cadence / Install /cshrc
-->Welcome to Cadence tools suite"
-->Virtuoso
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/e8a3f177-6eae-4f20-a3ae-9e63df9e8bbc)
 
-STEP:11 Analog design window will be opened
 
-STEP:12 Analog design using Virtuoso
+Specifications:
+Vpulse
 
-STEP:13 In Virtuoso
+V1 = 0
 
-STEP:14 File New library library nanae"
+V2 = 1
 
-STEP:15 Choose Attach to an existing technology library
+td = 0,tr=tf=1 n, ton= 100n ,T=200n
 
-STEP:16 Choose the folder where you. need to work
-->gpdk045 Apply
+Vdc = 1 Simulation Settings
 
-STEP:17 File cell veew choose library Type coll name
+Setup for transient analysis:
 
-STEP:18 Schematic windere will be opened
+Stop time =400n
 
-INVERTER:
+Setup for D.C analysis
 
-![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/5a75bf02-b62e-4bfc-8314-c339179e429b)
+Component to be selected in schematic is for d.c analysis
 
-OUTPUT:
+Start = -1 Stop = 1 resp. Expected Waveform:
 
-![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/ad272531-127f-4b0b-9a9a-428d1286ceb0)
+
+Transient Analysis
+
+
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/a2f5e6ee-18f6-4df5-8fab-938c18fede20)
+
+
+DC ANALYSIS
+
+
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/04dbccbf-b953-4159-bc45-aadf0ee955d1)
+
 
 NAND:
 
-![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/d6b445a5-91fe-4cb3-ba02-0ed3613ad0c9)
 
-OUTPUT:
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/53af6f84-b24c-43ed-b2db-18758bae86f9)
 
-![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/f7f82078-6ce5-434c-ba22-7e82a276fffb)
+
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/a54bb315-1391-4cdb-9ee4-0faca409461e)
+
+
+Specifications:
+Vpulse
+
+Va1 = 0 Va2 = 1 tr=tf=50ps, period=20ns pulse width = 10ns
+
+Vb1 = 0 Vb2 = 1 tr=tf=50ps, period=40ns pulse width = 20ns
+
+Vdc = 1
+
+Expected Waveform:
+
+
+Transient Analysis:
+
+
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/d2a9a8d5-96df-42a3-85ec-c0f558147744)
+
 
 NOR:
 
-![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/0bb3f169-1317-4632-b174-5b0be6fbc77f)
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/4b81a95d-3ebc-4818-bea7-8815c9df63e3)
 
-OUTPUT:
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/47b8edf5-2a9d-43de-9fd4-93bdccd8a6ff)
 
-![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/b76dca10-f063-4bd3-849f-c6864b5ad001)
+
+Specifications:
+Vpulse
+
+Va1 = 0 Va2 = 1 tr=tf=50ps, period=20ns pulse width = 10ns
+
+Vb1 = 0 Vb2 = 1 tr=tf=50ps, period=40ns pulse width = 20ns
+
+Vdc = 1
+
+Expected Waveform:
+
+Transient Analysis:
+
+
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/66abde65-07a7-4d09-ab6b-d628529b4c86)
+
 
 RESULT:
 
-The Simulate and Synthesis Inverter using CADENCE is successfully verified.
-
+Thus, the design,simulation and verification of the CMOS inverter,NAND,NOR from schematic using cadence was successfully completed.
 
 
 
