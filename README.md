@@ -1,6 +1,6 @@
 EXP-6
 
-     SIMULATE AND SYNTHESIS INVERTER USING CADENCE
+               SIMULATE AND SYNTHESIS INVERTER USING CADENCE
                                          
 
 AIM: To create,simulate the design of CMOS inverter,NAND,NOR from schematic using cadence.
@@ -147,7 +147,12 @@ Transient Analysis:
 ![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-6/assets/161333609/66abde65-07a7-4d09-ab6b-d628529b4c86)
 
 
+
+
+
+
 RESULT:
+
 
 Thus, the design,simulation and verification of the CMOS inverter,NAND,NOR from schematic using cadence was successfully completed.
 
